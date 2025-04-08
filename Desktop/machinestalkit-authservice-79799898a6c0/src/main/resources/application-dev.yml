@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: User-MS
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/users-ms
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: wajdmahdaoui@gmail.com
+    password: "cxgk fuup exni gpbp"
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+server:
+  port: 8081
+
+debug: true
+
+app:
+  jwtSecret: d2FqZCBGcnI0b25naGVuZk9QWk52VkdqWkI5cVNSUnZlc3RuRFp6T2ZlTzF1TkxQOTY=
+  jwtExpirationMs: 36000000
+  jwtRefreshExpirationMs: 86400000
+
+jwt:
+  cookieExpiry: 3600
+
+config:
+    import: "optional:file:.env"
+
